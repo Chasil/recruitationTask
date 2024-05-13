@@ -1,9 +1,8 @@
-version: '3.1'
-
 services:
   php:
-    image: php:8.2-apache
-    ports:
-      - '80:80'
+    tty: true
+    image: php:8.2
     volumes:
       - .:/var/www/html/
+    build:
+      dockerfile: Dockerfile
